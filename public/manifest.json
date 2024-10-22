@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "extension Template",
+  "short_name": "Template",
+  "version": "0.0.1",
+  "description": " this is a Next.js extension Template",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "192": "/icons/icon192.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "contextMenus",
+    "alarms",
+    "webRequest",
+    "downloads",
+    "storage",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "cookies"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["*.pdf", "*.docx", "index.html", "/scripts/*.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["inject.js"]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}

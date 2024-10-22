@@ -1,0 +1,26 @@
+{
+  "name": "frontend-cascade",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run prep",
+    "prep": "npm run exp && node out.js",
+    "exp": "next build",
+    "run": "next start",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-react": "^9.3.0",
+    "ckeditor5": "^43.2.0",
+    "ckeditor5-premium-features": "^43.2.0",
+    "next": "14.2.14",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "postcss": "^8",
+    "replace-in-file": "^8.2.0",
+    "tailwindcss": "^3.4.1"
+  }
+}
